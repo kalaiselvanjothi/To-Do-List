@@ -1,0 +1,231 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(-45deg, #ffecd2, #fcb69f, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease-in-out infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.app-header {
+    background: rgba(255,255,255,0.85);
+    color: #333;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border-radius: 0 0 16px 16px;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+.app-header p {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.1rem;
+    opacity: 0.85;
+}
+
+.greeting {
+    margin-top: 1rem;
+    font-size: 1.15rem;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.quote {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+    font-style: italic;
+    opacity: 0.85;
+}
+
+.container {
+    max-width: 400px;
+    margin: 2rem auto;
+    background: rgba(255,255,255,0.6);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.18);
+    animation: fadeIn 1.2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.fade-in {
+    animation: fadeIn 1.2s;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    border: 1px solid #d0d7e2;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(79,140,255,0.08);
+    background: rgba(255,255,255,0.85);
+}
+
+#taskInput:focus {
+    border: 1.5px solid #4f8cff;
+    box-shadow: 0 2px 12px rgba(79,140,255,0.18);
+}
+
+#addTaskButton {
+    background: #4f8cff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0 1.2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(79,140,255,0.12);
+}
+
+#addTaskButton:hover {
+    background: #2563eb;
+    box-shadow: 0 4px 16px rgba(37,99,235,0.18);
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#taskList li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #f7faff;
+    margin-bottom: 0.7rem;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-shadow: 0 1px 4px rgba(79,140,255,0.06);
+}
+
+.task-text {
+    word-break: break-word;
+    white-space: normal;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.task-actions {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.remove-task-button {
+    background: #ff5c5c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.remove-task-button:hover {
+    background: #d90429;
+}
+
+.edit-input {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #4f8cff;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(79,140,255,0.08);
+    width: 100%;
+}
+
+.edit-task-button {
+    background: transparent;
+    color: #fbbf24;
+    border: 2px solid #fbbf24;
+    border-radius: 4px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.edit-task-button:hover {
+    background: #fbbf24;
+    color: #fff;
+    border: 2px solid #f59e42;
+}
+
+.save-task-button {
+    background: #22c55e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.save-task-button:hover {
+    background: #16a34a;
+}
+
+/* Completed tasks */
+.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+#notification {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff5c5c;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 1000;
+}
+#notification.show {
+    opacity: 1;
+}
+#notification.success { background: #22c55e; }
+#notification.error { background: #ff5c5c; }
