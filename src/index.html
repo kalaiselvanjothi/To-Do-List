@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do Application</title>
+    <title>To-do Application</title>
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="app-header">
-        <h1>📝 My To-Do App</h1>
-        <p>Stay organized and productive!</p>
-        <div class="greeting">Welcome, HR! 👋</div>
-        <div class="quote">"Success is the sum of small efforts, repeated day in and day out." – Robert Collier</div>
+        <h1>My To-Do App</h1>
+        <p>Organize your tasks efficiently and boost productivity.</p>
+        <div class="greeting">Welcome to My To-Do App!</div>
+        <div class="quote">"Productivity is never an accident. It is always the result of a commitment to excellence." – Paul J. Meyer</div>
     </header>
     <main class="container fade-in">
         <section class="todo-section">
             <div class="input-group">
-                <input type="text" id="taskInput" placeholder="Add a new task...">
-                <button id="addTaskButton">+</button>
+                <input type="text" id="taskInput" placeholder="Enter a new task">
+                <button id="addTaskButton">Add Task</button>
             </div>
-            <ul id="taskList"></ul>
+            <ul id="taskList">
+            </ul>
         </section>
     </main>
     <script src="scripts/app.js"></script>
